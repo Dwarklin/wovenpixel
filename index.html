@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woven Pixel Creations</title>
+    <link rel="icon" href="assets/video/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/video/logo.svg" alt="Woven Pixel Logo" class="logo-icon">
+                <span>Woven Pixel</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li style="--i:0"><a href="#home">Home</a></li>
+                <li style="--i:1"><a href="#about">About</a></li>
+                <li style="--i:2"><a href="#services">Services</a></li>
+                <li style="--i:3"><a href="#portfolio">Portfolio</a></li>
+                <li style="--i:4"><a href="#contact">Contact</a></li>
+                <li>
+                    <div class="auth-butt   ons">
+            <button id="login-btn" onclick="openLoginModal()">Login</button>
+            <button id="logout-btn" onclick="handleLogout()" style="display: none;">Logout</button>
+                        <span id="user-display" class="user-display" style="display: none;"></span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+            <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transforming Ideas into<br><span class="highlight">Digital Masterpieces</span></h1>
+                <p class="hero-subtitle">Crafting innovative web experiences that blend creativity with functionality</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Creative Design</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Solutions</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <span>Fast Performance</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-button primary">Start Your Project</a>
+                    <a href="#portfolio" class="cta-button secondary">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-wrapper">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm Vibhav, a passionate web designer dedicated to creating beautiful and functional websites that help businesses thrive in the digital world.</p>
+                    <p>With years of experience in web design and development, I specialize in creating user-friendly, responsive websites that not only look great but also deliver results.</p>
+                </div>
+                <div class="skills">
+                <h3>Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-palette"></i>
+                        <span>Web Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <span>UI/UX Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <span>HTML/CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 98%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <span>React/Next.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-wrapper">
+            <h2>Services</h2>
+            <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-desktop"></i>
+                <h3>Web Design</h3>
+                <p>Custom website design tailored to your brand and business needs.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive Design</h3>
+                <p>Websites that look and work perfectly on all devices.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>User-friendly interfaces that enhance user experience.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Modern Web Development</h3>
+                <p>Custom websites built with modern frameworks and technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-wrapper">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://as1.ftcdn.net/v2/jpg/02/70/07/38/1000_F_270073819_Mny4FYzloFoXA5I1uKwlV8uEJb5doJ31.jpg" alt="Project 1">
+                <div class="portfolio-overlay">
+                    <h3>E-commerce Website</h3>
+                    <p>Online store with custom product catalog</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://as2.ftcdn.net/v2/jpg/02/60/51/63/1000_F_260516386_qKSZGbpEOJYUeXIYBYGbYYbsiWIpI6Uz.jpg" alt="Project 2">
+                <div class="portfolio-overlay">
+                    <h3>Business Website</h3>
+                    <p>Corporate website with modern design</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://as1.ftcdn.net/v2/jpg/05/18/44/62/1000_F_518446273_MFDwEjDzfBVmvI3srcopWkFf5WJTJNpi.jpg" alt="Project 3">
+                <div class="portfolio-overlay">
+                    <h3>Blog Website</h3>
+                    <p>Custom blog with content management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <section id="contact" class="contact-section">
+        <div class="contact-wrapper">
+            <h1><i class="fas fa-envelope"></i> Contact Me</h1>
+            <p class="section-subtitle">Have a project in mind or just want to say hello? Reach out to me!</p>
+            <div class="contact-container">
+            <form class="contact-form" action="https://formsubmit.co/dwarklin@gmail.com" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <input type="hidden" name="_next" value="#contact">
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h1>Get in Touch</h1>
+                <p><i class="fas fa-envelope"></i> dwarklin@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +968 7823 5146</p>
+            </div>
+        </div>
+    </section>
+        <p>&copy; 2025 Woven Pixel. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <div id="login-error" class="error-message"></div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                    <button type="button" onclick="closeLoginModal()">Cancel</button>
+                </div>
+                <p class="modal-switch">Don't have an account? <a href="#" onclick="switchToRegister(event)">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <h2>Create Account</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <input type="text" id="register-name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="register-email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-password" placeholder="Password" required
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                        title="Password must be at least 8 characters long and contain at least one letter and one number">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-confirm-password" placeholder="Confirm Password" required>
+                </div>
+                <div id="register-error" class="error-message"></div>
+                <div class="form-group">
+                    <button type="submit">Register</button>
+                    <button type="button" onclick="closeRegisterModal()">Cancel</button>
+                </div>
+                <p class="modal-switch">Already have an account? <a href="#" onclick="switchToLogin(event)">Login here</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

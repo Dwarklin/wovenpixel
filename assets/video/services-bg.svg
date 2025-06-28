@@ -1,0 +1,43 @@
+<svg width="100%" height="100%" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="grid-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2c3e50" stop-opacity="0.1">
+                <animate attributeName="stop-opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" stop-color="#3498db" stop-opacity="0.2">
+                <animate attributeName="stop-opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+        <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="url(#grid-gradient)" stroke-width="1"/>
+        </pattern>
+    </defs>
+
+    <!-- Animated background rectangles -->
+    <rect width="100%" height="100%" fill="url(#grid)">
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Floating circles -->
+    <circle cx="200" cy="300" r="20" fill="#3498db" opacity="0.2">
+        <animate attributeName="cy" values="300;250;300" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="800" cy="500" r="30" fill="#2c3e50" opacity="0.15">
+        <animate attributeName="cy" values="500;450;500" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.15;0.3;0.15" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Animated lines -->
+    <g stroke="#3498db" stroke-width="1" opacity="0.2">
+        <line x1="0" y1="100" x2="1200" y2="100">
+            <animate attributeName="y1" values="100;120;100" dur="6s" repeatCount="indefinite"/>
+            <animate attributeName="y2" values="100;80;100" dur="6s" repeatCount="indefinite"/>
+        </line>
+        <line x1="0" y1="700" x2="1200" y2="700">
+            <animate attributeName="y1" values="700;680;700" dur="7s" repeatCount="indefinite"/>
+            <animate attributeName="y2" values="700;720;700" dur="7s" repeatCount="indefinite"/>
+        </line>
+    </g>
+</svg>

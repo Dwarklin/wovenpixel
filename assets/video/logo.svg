@@ -1,0 +1,68 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6e48aa">
+        <animate attributeName="stop-color" values="#6e48aa;#9d50bb;#6e48aa" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#9d50bb">
+        <animate attributeName="stop-color" values="#9d50bb;#6e48aa;#9d50bb" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background hexagon with rotation -->
+  <path d="M20 5L5 35h30L20 5zm0 8l10 20H10L20 13z" fill="url(#logoGradient)" filter="url(#glow)">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 20 20"
+      to="360 20 20"
+      dur="20s"
+      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Pulsating center circle -->
+  <circle cx="20" cy="20" r="3" fill="#fff" opacity="0.8" filter="url(#glow)">
+    <animate
+      attributeName="r"
+      values="2;3;2"
+      dur="2s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"/>
+    <animate
+      attributeName="opacity"
+      values="0.8;1;0.8"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Orbiting particles -->
+  <g>
+    <circle cx="20" cy="15" r="1" fill="#fff">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 20 20"
+        to="360 20 20"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="25" r="1" fill="#fff">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="180 20 20"
+        to="540 20 20"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
