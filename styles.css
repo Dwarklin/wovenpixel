@@ -304,6 +304,7 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        color: #000000; /* Changed to black */
     }
 
     nav ul {
